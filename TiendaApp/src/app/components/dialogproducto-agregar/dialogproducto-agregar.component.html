@@ -1,0 +1,41 @@
+
+<div mat-dialog-content class="dialog__agregar">
+  <h1 mat-dialog-title>AGREGAR AL CARRO</h1>
+  <img src="{{data.Producto.foto}}" width="100" />
+  <br>
+
+  <mat-form-field>
+    <mat-label>MARCA</mat-label>
+    <input disabled matInput [(ngModel)]="data.Producto.marca" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field>
+    <mat-label>DESCRIPCION</mat-label>
+    <input matInput disabled [(ngModel)]="data.Producto.descripcion">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <mat-label>PRECIO</mat-label>
+    <input matInput disabled [(ngModel)]="data.Producto.precio"  >
+  </mat-form-field>
+<br>
+  <mat-form-field>
+    <mat-label>CANTIDAD</mat-label>
+    <input matInput type="number" min="1"  [(ngModel)]="producto_carrito.cantidad" (keypress)="onType($event)" >
+  </mat-form-field>
+
+  
+</div>
+
+<div mat-dialog-actions class="dialog__botones">
+  <button mat-button (click)="onNoClick()" *ngIf="producto_carrito.idProducto_Carro == 0;else elseBlock"><mat-icon>cancel</mat-icon>CANCELAR</button>
+  <ng-template #elseBlock>
+    <button mat-button  cdkFocusInitial  (click)="quitarProducto()"><mat-icon>add_circle</mat-icon> QUITAR </button>
+  </ng-template>
+  <br>  
+  <button mat-button  cdkFocusInitial (click)="onAgregar()"><mat-icon>add_circle</mat-icon> AGREGAR </button>
+  
+  
+</div>

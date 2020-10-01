@@ -1,0 +1,70 @@
+
+.main__carro{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+
+.carro__productos{
+width: 75%;
+
+display: flex;
+flex-wrap: wrap;
+
+overflow: scroll;
+justify-content: center;
+
+}
+
+.carro__resumen{
+width: 25%;
+background-color: white;
+padding: 40px;
+text-align: center;
+overflow: scroll;}
+
+.carro__subtotal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.carro__subtotal > p{
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 10px;
+
+
+}
+
+.carro__total  {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carro__total > p{
+    background-color: gainsboro;
+    width: 50%;
+    padding: 6px 0px;
+    border-radius: 10px;
+    color:black;
+    font-weight: 900;
+}
+
+.carro__error{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+}
+.carro__error > h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+.carro__error > button{
+    width: 200px;
+}

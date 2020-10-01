@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    place-items: center;
+}
+.main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    
+}
+.app{
+    display: flex;
+    flex: 1;
+    height: 90vh;
+    width: 95%;
+    box-shadow: -1px 4px 20px -6px black;
+}
+
+@media only screen and (max-width: 1661px) {
+    body{
+        place-items: unset;
+    }
+    .main{
+        display: block;
+        height: 100vh;
+        place-items: center;
+        
+    }
+    .app{
+        display: flex;
+        flex: 1;
+        height: 90vh;
+        
+        box-shadow: -1px 4px 20px -6px black;
+    }
+}

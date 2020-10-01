@@ -1,0 +1,37 @@
+
+<div mat-dialog-content class="dialog__agregar">
+  <h1 mat-dialog-title>{{data.accion}} PRODUCTO</h1>
+  <mat-form-field>
+    <mat-label>CODIGO</mat-label>
+    <input matInput disabled [(ngModel)]="producto_formulario.idProducto" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>MARCA</mat-label>
+    <input matInput [(ngModel)]="producto_formulario.marca" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field>
+    <mat-label>DESCRIPCION</mat-label>
+    <input matInput [(ngModel)]="producto_formulario.descripcion">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <mat-label>PRECIO</mat-label>
+    <input matInput [(ngModel)]="producto_formulario.precio" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>FOTO</mat-label>
+    <input matInput [(ngModel)]="producto_formulario.foto ">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="dialog__botones">
+  <button mat-button (click)="onNoClick()"><mat-icon>cancel</mat-icon>CANCELAR</button>
+  
+  <button mat-button  cdkFocusInitial *ngIf="data.accion === 'NUEVO'" (click)="onAgregar()"><mat-icon>add_circle</mat-icon>AGREGAR</button>
+  <button mat-button  cdkFocusInitial *ngIf="data.accion === 'ACTUALIZAR'" (click)="onActualizar()"> <mat-icon>update</mat-icon>ACTUALIZAR</button>
+</div>

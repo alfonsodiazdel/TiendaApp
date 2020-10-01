@@ -1,0 +1,24 @@
+.productos__main{
+    display: flex;
+    width: 95vw;
+    height: 90vh;
+    flex-direction: row;
+}
+.productos__row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.productos__lista{
+    display:flex;
+    height: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+}
+.productos__paginador{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}

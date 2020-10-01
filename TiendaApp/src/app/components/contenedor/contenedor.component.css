@@ -1,0 +1,10 @@
+.app__main{
+    display:flex;
+    height: 100%;
+    background-image: url('https://st.depositphotos.com/1713314/4123/v/450/depositphotos_41237729-stock-illustration-white-diagonal-stripes-seamless-texture.jpg');
+    background-repeat: repeat;
+    background-position: inherit;
+    width: 95vw;
+    flex-direction: column;
+
+}

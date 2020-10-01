@@ -1,0 +1,57 @@
+<div class="mantenimiento__main">
+    <app-sidebar></app-sidebar>
+    <div>
+    <app-perfil></app-perfil>
+    <button mat-button (click)="nuevoProducto()" >
+        <mat-icon aria-hidden="false" aria-label="Example home icon">add_circle</mat-icon> AGREGAR PRODUCTO
+        </button>
+    <div class="mat-elevation-z8 mantenimiento__tabla">
+    <table mat-table [dataSource]="productos">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="CODIGO">
+        <th mat-header-cell *matHeaderCellDef> CODIGO </th>
+        <td mat-cell *matCellDef="let element"> {{element.idProducto}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="MARCA">
+        <th mat-header-cell *matHeaderCellDef> MARCA </th>
+        <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="DESCRIPCION">
+        <th mat-header-cell *matHeaderCellDef> DESCRIPCION </th>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="PRECIO">
+        <th mat-header-cell *matHeaderCellDef> PRECIO </th>
+        <td mat-cell *matCellDef="let element"> S/. {{element.precio}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ELIMINAR">
+        <th mat-header-cell *matHeaderCellDef> ELIMINAR </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-button (click)="eliminarProducto(element.idProducto)">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">remove_circle</mat-icon>  ELIMINAR
+            </button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="ACTUALIZAR">
+        <th mat-header-cell *matHeaderCellDef> ACTUALIZAR </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-button (click)="actualizarProducto(element)">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">update</mat-icon> ACTUALIZAR
+            </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[10,15]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.productos__producto{
+    width: 190px;
+    margin: 5px;
+    padding: 10px;
+}
+.card_producto{
+    text-align: center;
+}
+.producto__titulo{
+    
+    display: flex;
+    font-size: 16px;
+    text-align: left;
+}
+.producto__subtitulo{
+    display: flex;
+    justify-content: left;
+}
+.img_producto
+{
+    
+    width: 50%;
+}

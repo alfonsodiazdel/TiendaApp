@@ -1,0 +1,18 @@
+<div class="productos__producto">
+    <mat-card class="card_producto">
+        <mat-card-header>
+          
+          <mat-card-title class="producto__titulo">{{producto.descripcion}}</mat-card-title>
+          <mat-card-subtitle class="producto__subtitulo">{{producto.marca}}</mat-card-subtitle>
+        </mat-card-header> 
+        <img class="img_producto"  src="{{producto.foto}}" width="100" />
+        <mat-card-content>
+          <h4>S/. {{producto.precio}} </h4>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="openDialog()">
+            <mat-icon aria-hidden="false"  aria-label="Example home icon">add_shopping_cart</mat-icon> VER
+          </button>
+        </mat-card-actions>
+      </mat-card>
+</div>

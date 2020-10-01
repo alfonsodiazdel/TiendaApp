@@ -1,0 +1,17 @@
+<div class="productos__main">
+  <app-sidebar></app-sidebar>
+  <div class="productos__row">
+    <app-perfil ></app-perfil>
+        <div class="productos__lista" > 
+          <div *ngFor="let prod of productos; index as i; trackBy: trackByFn">
+            <app-item [producto]="prod"></app-item>
+          </div>
+        </div>
+        <div class="productos__paginador">
+            <mat-paginator [length]="length"
+               [pageSize]="17"
+               (page)="obtenerProductos($event.pageIndex+1,$event.pageSize)">
+            </mat-paginator>
+        </div>
+  </div>
+</div>

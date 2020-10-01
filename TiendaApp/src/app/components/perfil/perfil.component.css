@@ -1,0 +1,10 @@
+.sidebar__foto{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.outline {
+    border-bottom: 1px solid lightgray;
+}

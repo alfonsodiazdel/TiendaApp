@@ -1,0 +1,21 @@
+.sidebar__menu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    
+}
+.menu__opcion{
+    display: flex;
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    
+}
+.menu__opcion :first-child{
+    font-size: 25px;
+    color: gray;
+    margin-right: 10%;
+}
+
+

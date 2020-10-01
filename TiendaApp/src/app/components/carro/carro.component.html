@@ -1,0 +1,35 @@
+
+<div class="main__carro" *ngIf="carro!= null && carro.prod_Carr.length >0 else elseTemplate"  >
+ 
+    <div class="carro__productos">
+        <div *ngFor="let item of carro.prod_Carr as i; trackBy: trackByFn">
+            <app-item [producto]="item.producto" (modificado)="refrescarCarro($event)"></app-item>
+        </div>
+    </div>
+
+    <div class="carro__resumen">
+        
+            <h2>MIS PRODUCTOS</h2>
+            <div *ngFor="let prod of carro.prod_Carr" class="carro__subtotal">
+                <p>{{prod.producto.descripcion }} x {{prod.cantidad}} : </p> <p>S/. {{prod.cantidad * prod.producto.precio}}</p>
+            </div>
+            <div class="carro__total">
+            <p>S/. {{total()}}</p>
+            </div>
+            <div>
+                <button mat-raised-button color="primary"(click)="pagar()"> 	<mat-icon>payment</mat-icon>  IR A PAGAR</button>
+                <br><br>
+                <button mat-raised-button color="sencondary" (click)="seguirComprando()"> 	<mat-icon>redeem</mat-icon>  SEGUIR COMPRANDO </button>
+            </div>
+    </div>
+
+</div>
+<ng-template #elseTemplate>
+    <div  class="carro__error">
+        <h3>POR FAVOR, AGREGUE PRODUCTOS AL CARRO</h3>
+        <br>
+        <button mat-raised-button color="primary" (click)="seguirComprando()"> 	<mat-icon>redeem</mat-icon>  SEGUIR COMPRANDO </button>
+    </div>
+</ng-template>
+
+

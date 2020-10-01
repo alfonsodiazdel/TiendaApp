@@ -1,0 +1,22 @@
+      <!-- Menu component -->
+    <div class="sidebar__menu" >
+        <div class="menu__opcion" [routerLink]="['/productos']" mat-ripple *ngIf="tipo=='USUARIO'">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">store</mat-icon>
+            <p>Productos</p>
+        </div>
+        <div class="menu__opcion" [routerLink]="['/carro']" mat-ripple *ngIf="tipo=='USUARIO'">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">shopping_cart</mat-icon>
+            <p>Carro</p>
+        </div>
+        <div class="menu__opcion" [routerLink]="['/mantenimiento']" mat-ripple *ngIf="tipo=='ADMINISTRADOR'"> 
+            <mat-icon aria-hidden="false" aria-label="Example home icon">list_alt</mat-icon>
+            <p>Mis productos</p>
+        </div>
+        
+        <div class="menu__opcion" (click)="signOut()" mat-ripple *ngIf="tipo" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon">exit_to_app</mat-icon>
+            <p>Log out</p>
+        </div>
+    </div>
+
+    <!-- Menu component -->
